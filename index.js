@@ -3,6 +3,7 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 let inputOneEle = document.getElementById("inputOne");
 let inputTwoEle = document.getElementById("inputTwo");
 let symbolsCheck = document.getElementById("symbols");
+let numbersCheck = document.getElementById("numbers");
 
 let firstPasswordGenerated = "";
 let secondPasswordGenerated = "";
@@ -14,21 +15,46 @@ function generatePassword() {
     firstPasswordGenerated = "";
     secondPasswordGenerated = "";
 
-    for (let i = 0; i < 15; i++){
-        characterOne = characters[Math.floor(Math.random() * 91)];
-        characterTwo = characters[Math.floor(Math.random() * 91)];
-
-        firstPasswordGenerated += characterOne;
-        secondPasswordGenerated += characterTwo;
+    //Without Symbols and numbers
+    if (!symbolsCheck.checked && !numbersCheck.checked){
+        console.log("Without Symbols and numbers");
+        for (let i = 0; i < 15; i++){
+            characterOne = characters[Math.floor(Math.random() * 51)];
+            characterTwo = characters[Math.floor(Math.random() * 51)];
+    
+            firstPasswordGenerated += characterOne;
+            secondPasswordGenerated += characterTwo;
+        }
+    } 
+    //only symbols
+    else if (symbolsCheck.checked && !numbersCheck.checked){
+        for (let i = 0; i < 15; i++){
+            
+            characterOne = characters[Math.floor(Math.random() * 51)];
+            characterTwo = characters[Math.floor(Math.random() * 51)];
+    
+            firstPasswordGenerated += characterOne;
+            secondPasswordGenerated += characterTwo;
+        }
     }
+    
+
+    //only numbers
+
+    //else
+
+
+
+    // for (let i = 0; i < 15; i++){
+    //     characterOne = characters[Math.floor(Math.random() * 91)];
+    //     characterTwo = characters[Math.floor(Math.random() * 91)];
+
+    //     firstPasswordGenerated += characterOne;
+    //     secondPasswordGenerated += characterTwo;
+    // }
 
     inputOneEle.value = firstPasswordGenerated;
     inputTwoEle.value = secondPasswordGenerated;
-    if (symbolsCheck.checked){
-        console.log("Esta activado");
-    }else{
-        console.log("No esta activado");
-    }
 }
 
 function copyToClipboard(element) {  
