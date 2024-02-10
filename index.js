@@ -2,6 +2,7 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 
 let inputOneEle = document.getElementById("inputOne");
 let inputTwoEle = document.getElementById("inputTwo");
+let symbolsCheck = document.getElementById("symbols");
 
 let firstPasswordGenerated = "";
 let secondPasswordGenerated = "";
@@ -23,4 +24,18 @@ function generatePassword() {
 
     inputOneEle.value = firstPasswordGenerated;
     inputTwoEle.value = secondPasswordGenerated;
+    if (symbolsCheck.checked){
+        console.log("Esta activado");
+    }else{
+        console.log("No esta activado");
+    }
 }
+
+function copyToClipboard(element) {  
+    // Select the text field
+    element.select();
+    element.setSelectionRange(0, 99999); // For mobile devices
+  
+     // Copy the text inside the text field
+    navigator.clipboard.writeText(element.value);
+  }
