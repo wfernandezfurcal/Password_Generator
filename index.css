@@ -48,7 +48,7 @@ h3 {
     margin-right: 40px;
 }
 
-button {
+.button {
     background-color: #10B981;
     margin-left: 52px;
     margin-top: 51px;
@@ -68,9 +68,8 @@ button {
 }
 
 #inputOne, #inputTwo {
-    margin: 35px 0 0 52px;
     height: 39px;
-    width: 211px;
+    width: 172px;
     background-color: #273549;
     border: none;
     color: #55F991;
@@ -78,7 +77,7 @@ button {
     font-size: 16px;
     font-weight: 500;
 }
-
+/* ////////////////////////////////////////////////////////////////////////////////////////// */
 /* Add Toggle switch */
 
   .switch {
@@ -141,3 +140,67 @@ button {
   .slider.round:before {
     border-radius: 50%;
   }
+
+
+  /* Copy link messagge */
+
+  /* .button:before {
+    content: "Copied";
+    position: absolute;
+    top: -45px;
+    right: 0px;
+    background: #5c81dc;
+    padding: 8px 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    display: none;
+  }
+
+  .button:after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: 25px;
+    width: 10px;
+    height: 10px;
+    background: #5c81dc;
+    transform: rotate(45deg);
+    display: none;
+  }
+
+  .button.active:before,
+  .button.active:after {
+    display: block;
+} */
+
+
+/* add copy button inside the input element */
+
+#inputsElements {
+  display: flex;
+}
+
+#inputOneSection, #inputTwoSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 35px 0 0 52px;
+
+}
+
+.copy-link-button {
+  background: #273549;
+  border: none;
+  height: 39px;
+  cursor: pointer;
+
+}
+
+/*Things to get done
+- Copied message when the text are copied to clipboard
+- Responsive
+- Light/Dark switch
+- Change Id to class
+Done
+- Copy button inside de input field
+*/

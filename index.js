@@ -82,3 +82,9 @@ function copyToClipboard(element) {
 
   }
   
+  //Copy message
+  let button = document.querySelector("button");
+  
+  button.addEventListener("click", function(){
+    button.classList.add("active");
+  })
