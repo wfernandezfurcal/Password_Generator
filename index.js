@@ -69,6 +69,13 @@ function copyToClipboard(element) {
   
      // Copy the text inside the text field
     navigator.clipboard.writeText(element.value);
+
+    //Copied message
+    const text = element.value;
+    
+    element.value = "Copied!";
+    setTimeout(() => element.value = text, 2000);
+
   }
 
   function characterFilter(){
@@ -81,10 +88,3 @@ function copyToClipboard(element) {
     return filteredCharter;
 
   }
-  
-  //Copy message
-  let button = document.querySelector("button");
-  
-  button.addEventListener("click", function(){
-    button.classList.add("active");
-  })

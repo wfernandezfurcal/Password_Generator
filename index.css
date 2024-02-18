@@ -141,39 +141,6 @@ h3 {
     border-radius: 50%;
   }
 
-
-  /* Copy link messagge */
-
-  /* .button:before {
-    content: "Copied";
-    position: absolute;
-    top: -45px;
-    right: 0px;
-    background: #5c81dc;
-    padding: 8px 10px;
-    border-radius: 20px;
-    font-size: 15px;
-    display: none;
-  }
-
-  .button:after {
-    content: "";
-    position: absolute;
-    top: -20px;
-    right: 25px;
-    width: 10px;
-    height: 10px;
-    background: #5c81dc;
-    transform: rotate(45deg);
-    display: none;
-  }
-
-  .button.active:before,
-  .button.active:after {
-    display: block;
-} */
-
-
 /* add copy button inside the input element */
 
 #inputsElements {
@@ -197,10 +164,10 @@ h3 {
 }
 
 /*Things to get done
-- Copied message when the text are copied to clipboard
 - Responsive
 - Light/Dark switch
 - Change Id to class
 Done
 - Copy button inside de input field
+- Copied message when the text are copied to clipboard
 */
