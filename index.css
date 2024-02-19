@@ -6,8 +6,8 @@ body {
 
 #container {
     height: 550px;
-    /* width: 550px; */
-    width: 78%;
+    width: 550px;
+    max-width: 550px;
     background-color: #1F2937;
     border: 1px solid #1F2937;
 
