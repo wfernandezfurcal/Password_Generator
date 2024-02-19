@@ -6,15 +6,17 @@ body {
 
 #container {
     height: 550px;
-    width: 550px;
+    width: 100%;
     max-width: 550px;
     background-color: #1F2937;
     border: 1px solid #1F2937;
 
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+    /* max-width: 320px; */
+    margin: auto;
 }
 
 h1 {
