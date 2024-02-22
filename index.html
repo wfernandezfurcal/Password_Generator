@@ -1,55 +1,57 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    </head>
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-</head>
-
-<body>
-    <div id="container">
-        <h1>Generate a <span>random password</span></h1>
-        <h3>Never use an insecure password again.</h3>
-        <div id="passwordSettings">
-            <button class="button" onclick="generatePassword()">Generate passwords</button>
-            <div>
-                <p>Symbols</p>
-                <label class="switch">
-                    <input type="checkbox" id="symbols" checked>
-                    <span class="slider round"></span>
-                </label>
+    <body>
+        <div id="container">
+            <i class="fa-solid fa-moon btn-theme rotate"></i>
+            <h1>Generate a <span>random password</span></h1>
+            <h3>Never use an insecure password again.</h3>
+            <div id="passwordSettings">
+                <button class="button" onclick="generatePassword()">Generate passwords</button>
+                <div>
+                    <p>Symbols</p>
+                    <label class="switch">
+                        <input type="checkbox" id="symbols" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div id="numbersElements">
+                    <p>Numbers</p>
+                    <label class="switch">
+                        <input type="checkbox" id="numbers" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
             </div>
-            <div id="numbersElements">
-                <p>Numbers</p>
-                <label class="switch">
-                    <input type="checkbox" id="numbers" checked>
-                    <span class="slider round"></span>
-                </label>
+            <div id="middleLine"></div>
+            <div id="inputsElements">
+                <div id="inputOneSection">
+                    <input id="inputOne" readonly>
+                    <button type="button" class="copy-link-button" onclick="copyToClipboard(inputOneEle)">
+                        <span class="material-symbols-outlined">content_copy</span>
+                    </button>
+                </div>
+                <div id="inputTwoSection">
+                    <input id="inputTwo" readonly>
+                    <button type="button" class="copy-link-button" onclick="copyToClipboard(inputTwoEle)">
+                        <span class="material-symbols-outlined">content_copy</span>
+                    </button>
+                </div>
             </div>
         </div>
-        <div id="middleLine"></div>
-        <div id="inputsElements">
-            <div id="inputOneSection">
-                <input id="inputOne" readonly>
-                <button type="button" class="copy-link-button" onclick="copyToClipboard(inputOneEle)">
-                    <span class="material-symbols-outlined">content_copy</span>
-                </button>
-            </div>
-            <div id="inputTwoSection">
-                <input id="inputTwo" readonly>
-                <button type="button" class="copy-link-button" onclick="copyToClipboard(inputTwoEle)">
-                    <span class="material-symbols-outlined">content_copy</span>
-                </button>
-            </div>
-        </div>
-    </div>
-    <script src="index.js"></script>
-</body>
+        <script src="index.js"></script>
+        <script src="https://kit.fontawesome.com/fd02bd66d1.js" crossorigin="anonymous"></script>
+    </body>
 
 </html>
