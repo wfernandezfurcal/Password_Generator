@@ -203,8 +203,10 @@ h3 {
 
   #inputOne, #inputTwo {
     width: 320px;
-    height: 39px;
+  }
 
+  .copy-link-button {
+    height: 43px;  
   }
 }
 
