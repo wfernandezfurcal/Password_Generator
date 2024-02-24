@@ -28,7 +28,7 @@
 /*/////////////////////////////////*/
 body {
     margin: 0;
-    background-color: #1C1C1C;
+    background-color: var(--bg);
     font-family: "Inter", sans-serif;
 }
 
@@ -37,9 +37,11 @@ body {
     width: 100%;
     max-width: 550px;
     background-color: var(--bg);
-    border: 1px solid #1F2937;
     margin: auto;
-    /* overflow: hidden; */
+    box-shadow:
+    inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    
 }
 
 h1 {
@@ -187,6 +189,10 @@ h3 {
 
 /* Media query for screen width approximately 420px */
 @media screen and (max-width: 420px) {
+  #container {
+    height: 620px;
+  }
+  
   h1 {
     margin: 83px auto 0 auto; 
   }
@@ -205,11 +211,15 @@ h3 {
   #inputOne, #inputTwo {
     width: 320px;
   }
+}
 
+@supports (-webkit-touch-callout: none) {
+  /* CSS specific to iOS devices */
   .copy-link-button {
-    height: 47px;  
+    height: 47px;
   }
 }
+
 
 /* Dark mode toggle */
 
