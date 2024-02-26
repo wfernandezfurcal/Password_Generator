@@ -1,38 +1,30 @@
 :root,
 :root.light {
-  /* Colours */
-  --secondary: #B381C6;
-  --secondary-accent: #D5B8EA;
-  --btn-text: #333333;
-  --base: #FFFFFF;
-
   /* Light theme */
-  --bg-accent: #E7E7E7;
-  
   --fg: #2B283A;
   --fg-accent: #6B7280;
   --bg: #ECFDF5;
+  --bg-accent: #f5fffa; 
 
   font-family: 'Inter', sans-serif;
 }
 
 :root.dark {
   /* Dark theme */
-  --bg-accent: #1F2937;
-  
   --fg: #FFFFFF;
   --fg-accent: #D5D4D8;
-  --bg: #1F2937; /*#273549;*/
-
+  --bg: #1F2937;
+  --bg-accent: #273549;
 }
-/*/////////////////////////////////*/
+
+/* Base styling */
+
 body {
     margin: 0;
     background-color: var(--bg);
-    font-family: "Inter", sans-serif;
 }
 
-#container {
+.container {
     min-height: 550px;
     width: 100%;
     max-width: 550px;
@@ -65,7 +57,7 @@ h3 {
     margin-left: 52px;
 }
 
-#passwordSettings {
+.passwordSettings {
     display: flex;
     align-items: center;
     justify-content: space-evenly; 
@@ -85,12 +77,12 @@ h3 {
     padding: 9px, 17px, 9px, 15px;
 }
 
-#middleLine {
+.middleLine {
     border: 1px solid #2F3E53;
     margin: 35px 52px 0 52px; 
 }
 
-#inputOne, #inputTwo {
+.inputOne, .inputTwo {
     height: 39px;
     width: 172px;
     background-color: #273549;
@@ -101,7 +93,7 @@ h3 {
     font-size: 16px;
     font-weight: 500;
 }
-/* ////////////////////////////////////////////////////////////////////////////////////////// */
+
 /* Add Toggle switch */
 
   .switch {
@@ -167,11 +159,11 @@ h3 {
 
 /* add copy button inside the input element */
 
-#inputsElements {
+.inputsElements {
   display: flex;
 }
 
-#inputOneSection, #inputTwoSection {
+.inputOneSection, .inputTwoSection {
   display: flex;
   align-items: center;
   margin: 35px auto;
@@ -187,9 +179,9 @@ h3 {
 
 }
 
-/* Media query for screen width approximately 420px */
+/* Media query for phones */
 @media screen and (max-width: 420px) {
-  #container {
+  .container {
     height: 620px;
   }
   
@@ -199,34 +191,33 @@ h3 {
   h3{
     margin-left: 30px;
   }
-  #inputOneSection, #inputTwoSection {
+  .inputOneSection, .inputTwoSection {
     margin-right: 22px;
   }
 
-  #inputsElements {
+  .inputsElements {
     display: block;
     margin-left: 30px;
   }
 
-  #inputOne, #inputTwo {
+  .inputOne, .inputTwo {
     width: 320px;
   }
 }
 
+/* CSS specific to iOS devices */
 @supports (-webkit-touch-callout: none) {
-  /* CSS specific to iOS devices */
   .copy-link-button {
     height: 47px;
   }
 }
-
 
 /* Dark mode toggle */
 
 .btn-theme {
   position: relative;
   font-size: 1.5rem;
-  background: var(--bg);
+  background: var(--bg-accent);
   color: var(--fg-accent);
   width: 2.2rem;
   height: 2.2rem;
@@ -248,13 +239,3 @@ h3 {
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-
-
-/*Things to get done
-- Change Id to class
-Done
-- Copy button inside de input field
-- Copied message when the text are copied to clipboard
-- Responsive
-- Light/Dark switch
-*/

@@ -2,21 +2,26 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 //Numbers 52 to 61
 //Symbols 62 to 90
 
-let inputOneEle = document.getElementById("inputOne");
-let inputTwoEle = document.getElementById("inputTwo");
-let symbolsCheck = document.getElementById("symbols");
-let numbersCheck = document.getElementById("numbers");
+// Find elements
+const inputOneEle = document.getElementById("inputOne");
+const inputTwoEle = document.getElementById("inputTwo");
+const symbolsCheck = document.getElementById("symbols");
+const numbersCheck = document.getElementById("numbers");
 
+// Declare variable of password generated
 let firstPasswordGenerated = "";
 let secondPasswordGenerated = "";
 
+// Generate password
 function generatePassword() {
+    //Declare a variable for stored each element generated
     let characterOne = "";
     let characterTwo = "";
-
+    // Clean var
     firstPasswordGenerated = "";
     secondPasswordGenerated = "";
 
+    //Operations
     //Without Symbols and numbers
     if (!symbolsCheck.checked && !numbersCheck.checked){
         for (let i = 0; i < 15; i++){
@@ -40,7 +45,7 @@ function generatePassword() {
     }
     //only numbers
     else if (!symbolsCheck.checked && numbersCheck.checked){
-        console.log("only numbers");
+    
         for (let i = 0; i < 15; i++){
             characterOne = characters[Math.floor(Math.random() * 61)];
             characterTwo = characters[Math.floor(Math.random() * 61)];
@@ -61,7 +66,19 @@ function generatePassword() {
     inputOneEle.value = firstPasswordGenerated;
     inputTwoEle.value = secondPasswordGenerated;
 }
+//Delete numbers of the string function
+function characterFilter(){
+    let filteredCharter = Math.floor(Math.random() * 91);
+    
+    while (filteredCharter > 51 && filteredCharter < 62){
+        filteredCharter = Math.floor(Math.random() * 91);
+    }
 
+    return filteredCharter;
+
+  }
+
+// Copy to clipboard function
 function copyToClipboard(element) {  
     // Select the text field
     element.select();
@@ -78,18 +95,7 @@ function copyToClipboard(element) {
 
   }
 
-  function characterFilter(){
-    let filteredCharter = Math.floor(Math.random() * 91);
-    
-    while (filteredCharter > 51 && filteredCharter < 62){
-        filteredCharter = Math.floor(Math.random() * 91);
-    }
-
-    return filteredCharter;
-
-  }
-
-  // Dark mode toggle
+// Dark mode toggle
 const btnTheme = document.querySelector(".btn-theme");
 
 // Determine the current theme mode
